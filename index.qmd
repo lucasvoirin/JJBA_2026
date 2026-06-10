@@ -125,7 +125,7 @@ Uncertain time delay estimation
 ::: columns
 ::: {.column width="30%"}
 
-Prior <br> parameters
+Prior of <br> parameters
 
 ::: {.fragment fragment-index=1}
 <br>
@@ -169,7 +169,7 @@ Distances between recorders
 :::
 ::: {.column width="30%"}
 
-Posterior parameters
+Posterior of parameters
 
 :::{.fragment fragment-index=1}
 <br>
