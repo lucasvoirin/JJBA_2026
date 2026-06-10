@@ -1,73 +1,72 @@
 ---
-title: "Developing acoustic localization for wildlife in environmental impact assessment"
+title: "Localizing sounds in the forest"
+subtitle: "A Bayesian approach with uncertainty in recorder positions"
 author: "**Lucas Voirin**, André Desrochers, Marc J. Mazerolle"
 bibliography: references.bib
 format:
   revealjs:
     theme: theme.scss
     css: custom.css
-    footer: "[lucasvoirin.github.io/PERG_2026](https://lucasvoirin.github.io/PERG_2026)"
+    footer: "[lucasvoirin.github.io/JJBA_2026](https://lucasvoirin.github.io/JJBA_2026)"
     logo: favicon-32x32.png
     pdf-separate-fragments: true
 ---
 
-# Assessing impacts
+## Passive Acoustic Monitoring
 
-## Challenges
+::: columns
 
-::: r-stack
-![](slides/eie_01.png){.fragment .fade-in-then-out fig-align="center"}
+::: {.column width="30%"}
 
-![](slides/eie_02.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/eie_03.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/eie_04.png){.fragment .fade-in-then-out fig-align="center"}
+![](images/audiomoth.png){height="500"}
 
 :::
 
-## Behavior
+::: {.column width="70%"}
 
+<br>
 
-::: r-stack
-![](slides/behav_01.png){.fragment .fade-in-then-out fig-align="center"}
+::: {.callout-tip .fragment icon=false}
+## Strengths
 
-![](slides/behav_02.png){.fragment .fade-in-then-out fig-align="center"}
+⏱️ Temporal resolution
 
-![](slides/behav_03.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/behav_04.png){.fragment .fade-in-then-out fig-align="center"}
+🗺️ Spatial coverage
 
 :::
 
-::: aside
-@Mennill_et_al_2006, @Dutilleux_et_al_2023, @Teixeira_et_al_2019
+::: {.callout-important .fragment icon=false}
+## Limitations
+
+📍 Fine spatial resolution
+
 :::
 
-## Passive acoustic monitoring
-
-::: r-stack
-![](slides/pam_01.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/pam_02.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/pam_03.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/pam_04.png){.fragment .fade-in-then-out fig-align="center"}
+:::
 
 :::
 
 
 ::: aside
- @Gibb_et_al_2019, @Sugai_et_al_2019
+
+@Gibb_et_al_2019, @Sugai_et_al_2019
+
 :::
 
+## Acoustic localization
 
-# Localizing sounds
+![](images/TDOA.png){heigth="500"}
 
-## On the field
+::: aside
+
+@Rhinehart_et_al_2020
+
+:::
+
+## Field setup
 
 ::: r-stack
+
 ![](slides/field_01.png){.fragment .fade-in-then-out fig-align="center"}
 
 ![](slides/field_02.png){.fragment .fade-in-then-out fig-align="center"}
@@ -76,141 +75,144 @@ format:
 
 :::
 
-::: aside
-@Rhinehart_et_al_2020
-:::
 
-## Objectives
+## Problems in forest {.smaller}
 
 <br>
-
-::: {.fragment}
-Localize with precision animal sounds
-:::
-
-<br>
-
-::: {.fragment}
-Account for uncertainties in:
-
-- Recorders positions
-- Time delay estimations 
-:::
-
-
-
-## At the lab
-
-::: r-stack
-![](slides/lab_01.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/lab_02.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/lab_03.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/lab_04.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/lab_05.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/lab_06.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/lab_07.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/lab_08.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/lab_09.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/lab_10.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/lab_11.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/lab_12.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/lab_13.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](slides/lab_14.png){.fragment .fade-in-then-out fig-align="center"}
-:::
-
-## Sound source localization
-
-
-::: r-stack
-![](figures/loc_01.png){.fragment fig-align="center" width=80%}
-
-![](figures/loc_02.png){.fragment fig-align="center" width=80%}
-
-![](figures/loc_03.png){.fragment fig-align="center" width=80%}
-
-![](figures/loc_21.png){.fragment fig-align="center" width=80%}
-
-![](figures/loc_22.png){.fragment fig-align="center" width=80%}
-:::
-
-## Assessing precision
-
-::: r-stack
-
-![](figures/err_01.png){.fragment fig-align="center" width=80%}
-
-![](figures/err_02.png){.fragment fig-align="center" width=80%}
-
-:::
-
-## Localizing recorders
-
-::: r-stack
-
-![](figures/loc_03.png){.fragment .fade-in-then-out fig-align="center" width=80%}
-
-![](slides/array_2.png){.fragment .fade-in-then-out fig-align="center"}
-
-![](figures/loc_03.png){.fragment .fade-in-then-out fig-align="center" width=80%}
-
-![](figures/loc_11.png){.fragment .fade-in-then-out fig-align="center" width=80%}
-
-![](figures/loc_12.png){.fragment .fade-in-then-out fig-align="center" width=80%}
-
-:::
-
-
-# Mapping behaviors
-
-
-## Objectives {.smaller}
-
 
 ::: columns
 
-::: column
+::: {.column .fragment}
+
+Uncertain recorder positions
+
+![](images/uncertainty_gps.png){height="300" fig-align="center"}
+
+:::
+
+::: {.column .fragment}
+
+Uncertain time delay estimation
+
+![](images/uncertainty_tdoa.png){height="300" fig-align="center"}
+
+:::
+:::
+
+
+# Localizing recorders
+
+## What do we know?
+
+::: r-stack
+
+![](slides/array_01.png){fig-align="center" height="600"}
+
+![](slides/array_02.png){fig-align="center" .fragment height="600"}
+
+![](slides/array_03.png){fig-align="center" .fragment height="600"}
+
+
+
+:::
+
+## Bayes information processing
+
 
 <br>
 
+::: columns
+::: {.column width="30%"}
 
-<span style="color:green;">{{<fa check size=2x >}}</span>
- Localize with precision animal sounds
+Prior <br> parameters
 
+::: {.fragment fragment-index=1}
 <br>
 
-Account for uncertainties in:
-
-- <span style="color:green;">{{<fa check size=2x >}}</span> Recorders positions
-- <span style="color:green;">{{<fa check size=2x >}}</span> Time delay estimations 
-
-:::
-
-::: column
-
-![](figures/loc_04.png){.fragment .fade-in-then-out fig-align="center" width=80%}
-
+GPS recorder coordinates
 :::
 
 :::
+:::{.column width="5%"}
+×
 
-## Linking sounds to landscape
+:::{.fragment fragment-index=1}
+<br> 
+<br> 
 
-![](figures/drone.jpeg){fig-align="center" width=30%}
+×
+:::
+:::
+::: {.column width="30%"}
+
+Data <br> likelihood
 
 
+:::{.fragment fragment-index=1}
+<br>
+
+Distances between recorders
+
+:::
+:::
+::: {.column width="5%"}
+
+=
+
+::: {.fragment fragment-index=1}
+<br>
+<br>
+
+=
+:::
+:::
+::: {.column width="30%"}
+
+Posterior parameters
+
+:::{.fragment fragment-index=1}
+<br>
+
+Posterior recorder coordinates
+
+:::
+:::
+:::
+
+
+## Estimating recorder positions
+
+::: r-stack
+
+![](slides/array_03.png){fig-align="center" height="600"}
+
+![](slides/array_04.png){fig-align="center" .fragment height="600"}
+
+![](slides/array_05.png){fig-align="center" .fragment height="600"}
+
+![](slides/array_06.png){fig-align="center" .fragment height="600"}
+
+![](slides/array_07.png){fig-align="center" .fragment height="600"}
+
+![](slides/array_08.png){fig-align="center" .fragment height="600"}
+
+![](slides/array_11.png){fig-align="center" .fragment height="600"}
+
+![](slides/array_12.png){fig-align="center" .fragment height="600"}
+
+
+:::
+
+# Localizing sounds
+
+## Probability distribution of sound source location
+
+![](figures/loc.png){fig-align="center" height="600"}
+
+
+## To explore these methods
+
+![](slides/lps.png){fig-align="center" height="500"}
 
 
 # Thank you!{.smaller}
